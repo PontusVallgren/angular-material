@@ -14,4 +14,20 @@
     <!-- Possible to disable -->
     <mat-radio-button vlaue="premium">Premium</mat-radio-button>
   </mat-radio-group>
+
+  <mat-form-field>
+    <mat-select formControlName="category" placeholder="Select category">
+      <mat-option>None</mat-option>
+      <!-- Empty select -->
+
+      <mat-optgroup label="Beginners">
+        <mat-option value="newprogramming">New to programming</mat-option>
+        <mat-option value="newjavascript">New to javascript</mat-option>
+        <mat-option value="newregular">New to angular</mat-option>
+      </mat-optgroup>
+
+      <mat-option value="intermediate">Intermediate</mat-option>
+      <mat-option value="advanced">Advanced</mat-option>
+    </mat-select>
+  </mat-form-field>
 </div>
