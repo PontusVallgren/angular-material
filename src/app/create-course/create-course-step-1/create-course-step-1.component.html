@@ -44,4 +44,12 @@
 
     <mat-datepicker #releaseAtPicker [dateClass]="dateClass"> </mat-datepicker>
   </mat-form-field>
+
+  <mat-checkbox
+    color="primary"
+    formControlName="downloadsAllowed"
+    [indeterminate]="true"
+  >
+    Downloads allowed?
+  </mat-checkbox>
 </div>
