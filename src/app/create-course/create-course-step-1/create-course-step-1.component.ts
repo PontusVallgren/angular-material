@@ -2,6 +2,9 @@ import { Component } from "@angular/core";
 import { UntypedFormBuilder, Validators } from "@angular/forms";
 import { MatCalendarCellClassFunction } from "@angular/material/datepicker";
 
+const SAMPLE_TEXT =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
 @Component({
   selector: "create-course-step-1",
   templateUrl: "create-course-step-1.component.html",
@@ -17,7 +20,10 @@ export class CreateCourseStep1Component {
     category: ["BEGINNER", Validators.required],
     courseType: ["premium", Validators.required],
     downloadsAllowed: [false, Validators.requiredTrue],
-    longDescription: ["", [Validators.required, Validators.minLength(3)]],
+    longDescription: [
+      SAMPLE_TEXT,
+      [Validators.required, Validators.minLength(3)],
+    ],
   });
 
   dateClass: MatCalendarCellClassFunction<Date> = (cellDate, view) => {
